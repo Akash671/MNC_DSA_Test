@@ -1,0 +1,122 @@
+For a given array of integers, perform operations on the array. Return the resulting array after all operations have been applied in the order given. Each operation contains two indices. Reverse the subarray between those zero-based indices, inclusive.
+
+
+Example
+arr = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+ 
+operations = [[0, 9], [4, 5], [3, 6], [2, 7], [1, 8], [0, 9]
+
+
+Operation   Left  To Reverse                              Right               Result
+
+(0,9)        []   [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]          []                   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]   
+ 
+
+and similar
+
+
+
+
+A
+ 
+1
+ 
+2
+ 
+In the first operation, all elements are reversed. There are no elements to the right or left.
+ 
+In the second operation, only the elements in the "To Reverse" column are reversed. Those to the left and right remain the same. Similar logic is applied for further operations.
+ 
+Function Description
+ 
+Complete the function perform Operations in the editor below.
+ 
+The function has the following parameter(s):
+ 
+int arr[n]: an array of integers
+ 
+int operations[q][2]: a 2-dimensional array of starting and ending indices
+ 
+Returns:
+ 
+int[n]: the final array after all operations have been performed
+ 
+Constraints
+ 
+In the first operation, all elements are reversed. There are no elements to the right or left.
+ 
+In the second operation, only the elements in the "To Reverse" column are reversed. Those to the left and right remain the same. Similar logic is applied for further operations.
+ 
+Function Description
+ 
+Complete the function perform Operations in the editor below.
+ 
+The function has the following parameter(s):
+ 
+int arr[n]: an array of integers
+ 
+int operations[q][2]: a 2-dimensional array of starting and ending indices
+ 
+Returns:
+ 
+int[n]: the final array after all operations have been performed
+
+
+Input from stdin will be processed as follows and passed to the function.
+ 
+The first line contains an integer, n, the size of arr.
+ 
+Each of the following n lines contains a single integer, arr[i].
+ 
+The next line contains an integer, q, the size of operations.
+ 
+In the second line, there is a single integer 2, the number of columns in each
+ 
+operations[i].
+ 
+Each of the following a lines contains two space-separated integers, operations[i].
+
+
+Sample Input
+ 
+STDIN
+ 
+Function
+ 
+3123
+ 
+3
+ 
+2
+ 
+→ arr[] size n = 3
+ 
+→ arr = [1, 2, 3]
+ 
+→ operations [] size q = 3
+ 
+→ operations [q][] size columns = 2 (always = 2)
+ 
+02
+ 
+→ operations = [[0, 2], [1, 2], [0, 2]]
+ 
+H
+ 
+12
+ 
+02
+ 
+Sample Output
+ 
+2 213 3
+ 
+Explanation
+ 
+The original array arr = [1, 2, 3].
+ 
+Reverse arr[0] through arr[2]: arr' = [3, 2, 1].
+ 
+Reverse arr[1] through arr[2]: arr" = [3, 1, 2],
+ 
+Reverse arr"[0] through arr"[2]: arr"" = [2, 1, 3].

@@ -1,0 +1,11 @@
+def perform_operations(arr, operations):
+    for op in operations:
+        start, end = op
+        arr[start:end+1] = arr[start:end+1][::-1]
+    return arr
+
+# Example usage:
+arr = [1, 2, 3]
+operations = [[0, 2], [1, 2], [0, 2]]
+result = perform_operations(arr, operations)
+print(result)  # Output: [2, 1, 3]

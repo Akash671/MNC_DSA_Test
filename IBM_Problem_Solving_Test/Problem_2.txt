@@ -1,0 +1,62 @@
+question2: 
+
+
+A system used by a compliance department contains a queue of all current compliance issues along with their priorities. The priorities range from 1 to 99. Create an algorithm that will reassign priorities so that the value of the maximum priority assigned is minimized, keeping the relative priorities between all issues the same.
+ 
+Example
+ 
+priorities = [1, 4, 8, 4]
+ 
+There are three priority levels: 1, 4 and 8. The array elements are reassigned to priorities [1, 2, 3, 21. Their relative priorities are maintained while the value of the maximum priority is minimized.
+ 
+Given the priorities of the issues, return a list that contains the reassigned priority values without reordering.
+ 
+Function Description
+ 
+Complete the reassigned Priorities function in the editor below. It must return an integer array that represents the reassigned priorities of each element in the original order.
+ 
+reassigned Priorities has the following parameter(s): int priorities[n]: an array of integers that represents current priorities
+ 
+
+
+
+
+
+ 
+ 
+ 
+▼Input Format For Custom Testing
+ 
+The first line contains an integer, n, that denotes the size of priorities. Each line i of the n subsequent lines (where 0 ≤ i<n) contains priorities[i].
+ 
+▼Sample Case 0
+ 
+Sample Input For Custom Testing
+ 
+STDIN
+ 
+Function
+ 
+4 → priorities[] size n = 4
+ 
+1 → priorities = [1, 3, 7, 3]
+ 
+3
+ 
+7
+ 
+3
+ 
+Sample Output
+ 
+1
+ 
+2
+ 
+3
+ 
+2
+ 
+Explanation
+ 
+There are three priority levels: 1, 3, 7. They can be reassigned priorities of 1, 2 and 3 respectively. Replacing the values in priorities returns [1, 2, 3, 2]

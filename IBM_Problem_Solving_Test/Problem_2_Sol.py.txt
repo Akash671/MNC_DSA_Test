@@ -1,0 +1,16 @@
+def reassigned_priorities(priorities):
+    # Get the unique priorities and sort them
+    unique_priorities = sorted(set(priorities))
+    
+    # Create a mapping from old priorities to new consecutive priorities
+    priority_map = {old: new for new, old in enumerate(unique_priorities, start=1)}
+    
+    # Reassign priorities using the map
+    reassigned = [priority_map[priority] for priority in priorities]
+    
+    return reassigned
+
+# Example usage
+priorities = [1, 3, 7, 3]
+result = reassigned_priorities(priorities)
+print(result)  # Output: [1, 2, 3, 2]
